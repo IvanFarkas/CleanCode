@@ -21,6 +21,10 @@ namespace CleanCode.Api.Controllers
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
+      int 1 = 0;
+
+      if (int == 1) return null;
+
       return Enumerable.Range(1, 5).Select(index => new WeatherForecast
       {
         Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),

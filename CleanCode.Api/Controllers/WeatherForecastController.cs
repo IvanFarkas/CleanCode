@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CleanCode.Api.Controllers
 {
+
+
   [ApiController]
   [Route("[controller]")]
   public class WeatherForecastController : ControllerBase
@@ -17,13 +19,16 @@ namespace CleanCode.Api.Controllers
     {
       _logger = logger;
     }
-
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
-      int 1 = 0;
+      int i = 0;
 
-      if (int == 1) return null;
+
+
+
+
+      if (i == 1) return null;
 
       return Enumerable.Range(1, 5).Select(index => new WeatherForecast
       {
@@ -33,5 +38,21 @@ namespace CleanCode.Api.Controllers
       })
       .ToArray();
     }
+
+
+
+    private void Method1() { }
+    #region Region Description
+    private void Method2() { }
+    #endregion
+    private void Method3() { }
+
+
+
+
   }
+
+
+
+
 }

@@ -1,3 +1,4 @@
-﻿namespace CleanCode.Models;
-
-public class Class1 { }
+﻿namespace CleanCode.Models
+{
+  public class Class1 { }
+}

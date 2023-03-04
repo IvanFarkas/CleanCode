@@ -27,7 +27,10 @@ namespace CleanCode.Api.Controllers
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
-      var i = 0;
+      var rnd = new Random();
+      var i = rnd.Next(0, 1);
+
+      //var i = 0;
 
       #region Region Description
       if (i == 1)

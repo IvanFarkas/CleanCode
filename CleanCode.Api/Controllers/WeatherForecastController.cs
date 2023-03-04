@@ -29,10 +29,14 @@ namespace CleanCode.Api.Controllers
     {
       var i = 0;
 
+      #region Region Description
       if (i == 1)
       {
-        return null;
+        _logger.LogInformation("Nothin");
+
+        return Enumerable.Empty<WeatherForecast>();
       }
+      #endregion
 
       return Enumerable.Range(1, 5).Select(index => new WeatherForecast
                                                     {
@@ -42,13 +46,5 @@ namespace CleanCode.Api.Controllers
                                                     })
         .ToArray();
     }
-
-    private void Method1() { }
-
-    #region Region Description
-    private void Method2() { }
-    #endregion
-
-    private void Method3() { }
   }
 }

@@ -1,5 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanCode.Api.Controllers;
@@ -8,7 +7,6 @@ namespace CleanCode.Api.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-  [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1600:ElementsMustBeDocumented", Justification = "Reviewed. Suppression is OK here.")]
   private static readonly string[] Summaries =
   {
     "Freezing",
@@ -27,10 +25,6 @@ public class WeatherForecastController : ControllerBase
 
   public WeatherForecastController(ILogger<WeatherForecastController> logger) => _logger = logger;
 
-  [SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1123:DoNotPlaceRegionsWithinElements", Justification = "Reviewed. Suppression is OK here.")]
-  [SuppressMessage("StyleCop.CSharp.LayoutRules", "SA1512:SingleLineCommentsMustNotBeFollowedByBlankLine", Justification = "Reviewed. Suppression is OK here.")]
-  [SuppressMessage("StyleCop.CSharp.SpacingRules", "SA1005:SingleLineCommentsMustBeginWithSingleSpace", Justification = "Reviewed. Suppression is OK here.")]
-  [SuppressMessage("StyleCop.CSharp.LayoutRules", "SA1515:SingleLineCommentMustBePrecededByBlankLine", Justification = "Reviewed. Suppression is OK here.")]
   [HttpGet(Name = "GetWeatherForecast")]
   public IEnumerable<WeatherForecast> Get()
   {

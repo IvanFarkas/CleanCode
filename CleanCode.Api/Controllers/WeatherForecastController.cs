@@ -1,3 +1,7 @@
+using System.Diagnostics;
+
+using CleanCode.Models;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanCode.Api.Controllers;
@@ -38,12 +42,23 @@ public class WeatherForecastController : ControllerBase
       return Enumerable.Empty<WeatherForecast>();
     }
 
-    return Enumerable.Range(1, 5).Select(
+    var retVal = Enumerable.Range(1, 5).Select(
       index => new WeatherForecast
                {
                  Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
                  TemperatureC = Random.Shared.Next(-20, 55),
                  Summary = Summaries[Random.Shared.Next(Summaries.Length)]
                }).ToArray();
+
+    Debug.WriteLine(retVal[0].TemperatureF);
+    
+    return retVal;
   }
+
+  [HttpGet(Name = "GetTest")]
+  public int GetTest(TestRequest request)
+  {
+    return request.Id;
+  }
+
 }

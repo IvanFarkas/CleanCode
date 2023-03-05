@@ -28,6 +28,7 @@ dotnet_style_require_accessibility_modifiers = for_non_interface_members:suggest
 
 # ReSharper properties
 resharper_align_multiline_array_and_object_initializer = true
+resharper_apply_auto_detected_rules = false
 resharper_braces_for_for = required
 resharper_braces_for_foreach = required
 resharper_braces_for_ifelse = required
@@ -97,6 +98,7 @@ resharper_protobuf_tab_width = 2
 resharper_protobuf_use_indent_from_vs = false
 resharper_show_autodetect_configure_formatting_tip = false
 resharper_simple_embedded_statement_style = line_break
+resharper_use_heuristics_for_body_style = true
 resharper_vb_indent_size = 2
 resharper_vb_tab_width = 2
 resharper_vb_use_indent_from_vs = false
@@ -126,12 +128,14 @@ resharper_xml_tab_width = 2
 resharper_xml_use_indent_from_vs = false
 
 # ReSharper inspection severities
+resharper_arrange_accessor_owner_body_highlighting = suggestion
 resharper_arrange_redundant_parentheses_highlighting = hint
 resharper_arrange_this_qualifier_highlighting = hint
 resharper_arrange_type_member_modifiers_highlighting = hint
 resharper_arrange_type_modifiers_highlighting = hint
 resharper_built_in_type_reference_style_for_member_access_highlighting = hint
 resharper_built_in_type_reference_style_highlighting = hint
+resharper_property_can_be_made_init_only_local_highlighting = hint
 resharper_redundant_base_qualifier_highlighting = warning
 resharper_style_cop_sa1309_highlighting = none
 resharper_style_cop_sa1600_highlighting = none
@@ -139,10 +143,10 @@ resharper_style_cop_sa1633_highlighting = none
 resharper_suggest_var_or_type_built_in_types_highlighting = hint
 resharper_suggest_var_or_type_elsewhere_highlighting = hint
 resharper_suggest_var_or_type_simple_types_highlighting = hint
-csharp_using_directive_placement = inside_namespace:silent
+resharper_unused_inherited_parameter_highlighting = none
+resharper_unused_type_parameter_highlighting = none
+
 csharp_prefer_simple_using_statement = true:suggestion
-csharp_prefer_braces = true:silent
-csharp_style_namespace_declarations = block_scoped:none
 csharp_style_prefer_method_group_conversion = true:silent
 csharp_style_prefer_top_level_statements = true:silent
 csharp_style_expression_bodied_methods = true:none
@@ -162,6 +166,17 @@ csharp_style_prefer_range_operator = true:suggestion
 csharp_style_implicit_object_creation_when_type_is_apparent = true:suggestion
 csharp_style_prefer_tuple_swap = true:suggestion
 csharp_indent_labels = one_less_than_current
+
+# Added - Reevaluate later.
+resharper_property_can_be_made_init_only_global_highlighting = hint
+resharper_unused_auto_property_accessor_global_highlighting = hint
+resharper_unused_auto_property_accessor_local_highlighting = hint
+resharper_unused_member_global_highlighting = hint
+resharper_unused_type_global_highlighting = hint
+
+csharp_using_directive_placement = inside_namespace:silent
+csharp_prefer_braces = true:silent
+csharp_style_namespace_declarations = block_scoped:none
 
 [*.{cs,vb}]
 #### Naming styles ####

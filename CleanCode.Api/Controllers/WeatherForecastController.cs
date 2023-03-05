@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanCode.Api.Controllers;
@@ -34,7 +33,7 @@ public class WeatherForecastController : ControllerBase
 // var i = 0;
     if (i == 1)
     {
-      _logger.LogInformation("Nothin");
+      _logger.LogInformation("Nothing");
 
       return Enumerable.Empty<WeatherForecast>();
     }

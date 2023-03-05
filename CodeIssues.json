@@ -5,10 +5,10 @@
     {
       "results": [
         {
-          "ruleId": "ConditionIsAlwaysTrueOrFalse",
+          "ruleId": "InconsistentNaming",
           "ruleIndex": 1,
           "message": {
-            "text": "Expression is always false"
+            "text": "Name '_logger' does not match rule 'Instance fields (private)'. Suggested name is 'logger'."
           },
           "locations": [
             {
@@ -18,37 +18,140 @@
                   "uriBaseId": "solutionDir"
                 },
                 "region": {
-                  "startLine": 36,
-                  "startColumn": 11,
-                  "endLine": 36,
-                  "endColumn": 17,
-                  "charOffset": 822,
-                  "charLength": 6
+                  "startLine": 23,
+                  "startColumn": 57,
+                  "endLine": 23,
+                  "endColumn": 64,
+                  "charOffset": 503,
+                  "charLength": 7
                 }
               }
             }
           ]
         },
         {
-          "ruleId": "UnusedVariable",
-          "ruleIndex": 3,
+          "ruleId": "UnusedAutoPropertyAccessor.Global",
+          "ruleIndex": 5,
           "message": {
-            "text": "Local variable 'rnd' is never used"
+            "text": "Auto-property accessor 'Date.get' is never used"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "CleanCode.Api/Controllers/WeatherForecastController.cs",
+                  "uri": "CleanCode.Api/WeatherForecast.cs",
                   "uriBaseId": "solutionDir"
                 },
                 "region": {
-                  "startLine": 30,
-                  "startColumn": 11,
-                  "endLine": 30,
-                  "endColumn": 14,
-                  "charOffset": 702,
+                  "startLine": 5,
+                  "startColumn": 28,
+                  "endLine": 5,
+                  "endColumn": 32,
+                  "charOffset": 92,
+                  "charLength": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UnusedAutoPropertyAccessor.Global",
+          "ruleIndex": 5,
+          "message": {
+            "text": "Auto-property accessor 'Summary.get' is never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "CleanCode.Api/WeatherForecast.cs",
+                  "uriBaseId": "solutionDir"
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 30,
+                  "endLine": 11,
+                  "endColumn": 34,
+                  "charOffset": 256,
+                  "charLength": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "PropertyCanBeMadeInitOnly.Global",
+          "ruleIndex": 7,
+          "level": "note",
+          "message": {
+            "text": "Property can be made init-only"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "CleanCode.Api/WeatherForecast.cs",
+                  "uriBaseId": "solutionDir"
+                },
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 36,
+                  "endLine": 7,
+                  "endColumn": 39,
+                  "charOffset": 142,
                   "charLength": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UnusedMember.Global",
+          "ruleIndex": 8,
+          "level": "note",
+          "message": {
+            "text": "Property 'TemperatureF' is never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "CleanCode.Api/WeatherForecast.cs",
+                  "uriBaseId": "solutionDir"
+                },
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 28,
+                  "charOffset": 167,
+                  "charLength": 12
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UnusedType.Global",
+          "ruleIndex": 3,
+          "level": "note",
+          "message": {
+            "text": "Class 'Class1' is never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "CleanCode.Models/Class1.cs",
+                  "uriBaseId": "solutionDir"
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 16,
+                  "endLine": 3,
+                  "endColumn": 22,
+                  "charOffset": 46,
+                  "charLength": 6
                 }
               }
             }
@@ -64,21 +167,21 @@
           "informationUri": "http://www.jetbrains.com/resharper/features/command-line.html",
           "rules": [
             {
-              "id": "CodeRedundancy",
+              "id": "ConstraintViolation",
               "shortDescription": {
-                "text": "Redundancies in Code"
+                "text": "Constraints Violations"
               }
             },
             {
-              "id": "ConditionIsAlwaysTrueOrFalse",
+              "id": "InconsistentNaming",
               "shortDescription": {
-                "text": "Expression is always 'true' or always 'false'"
+                "text": "Inconsistent Naming"
               },
-              "helpUri": "https://www.jetbrains.com/resharperplatform/help?Keyword=ConditionIsAlwaysTrueOrFalse",
+              "helpUri": "https://www.jetbrains.com/resharperplatform/help?Keyword=InconsistentNaming",
               "relationships": [
                 {
                   "target": {
-                    "id": "CodeRedundancy"
+                    "id": "ConstraintViolation"
                   },
                   "kinds": [
                     "superset"
@@ -93,11 +196,72 @@
               }
             },
             {
-              "id": "UnusedVariable",
+              "id": "UnusedType.Global",
               "shortDescription": {
-                "text": "Unused local variable"
+                "text": "Type is never used: Non-private accessibility"
               },
-              "helpUri": "https://www.jetbrains.com/resharperplatform/help?Keyword=UnusedVariable",
+              "helpUri": "https://www.jetbrains.com/resharperplatform/help?Keyword=UnusedType.Global",
+              "relationships": [
+                {
+                  "target": {
+                    "id": "DeclarationRedundancy"
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "CodeSmell",
+              "shortDescription": {
+                "text": "Potential Code Quality Issues"
+              }
+            },
+            {
+              "id": "UnusedAutoPropertyAccessor.Global",
+              "shortDescription": {
+                "text": "Auto-property accessor is never used: Non-private accessibility"
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "CodeSmell"
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "BestPractice",
+              "shortDescription": {
+                "text": "Common Practices and Code Improvements"
+              }
+            },
+            {
+              "id": "PropertyCanBeMadeInitOnly.Global",
+              "shortDescription": {
+                "text": "Property can be made init-only: Non-private accessibility"
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "BestPractice"
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "UnusedMember.Global",
+              "shortDescription": {
+                "text": "Type member is never used: Non-private accessibility"
+              },
+              "helpUri": "https://www.jetbrains.com/resharperplatform/help?Keyword=UnusedMember.Global",
               "relationships": [
                 {
                   "target": {

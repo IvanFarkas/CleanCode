@@ -1,0 +1,132 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "ConditionIsAlwaysTrueOrFalse",
+          "ruleIndex": 1,
+          "message": {
+            "text": "Expression is always false"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "CleanCode.Api/Controllers/WeatherForecastController.cs",
+                  "uriBaseId": "solutionDir"
+                },
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 11,
+                  "endLine": 36,
+                  "endColumn": 17,
+                  "charOffset": 822,
+                  "charLength": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UnusedVariable",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Local variable 'rnd' is never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "CleanCode.Api/Controllers/WeatherForecastController.cs",
+                  "uriBaseId": "solutionDir"
+                },
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 11,
+                  "endLine": 30,
+                  "endColumn": 14,
+                  "charOffset": 702,
+                  "charLength": 3
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "InspectCode",
+          "organization": "JetBrains, Inc",
+          "fullName": "JetBrains Inspect Code 2022.3.2",
+          "semanticVersion": "223.0.20230125.130213",
+          "informationUri": "http://www.jetbrains.com/resharper/features/command-line.html",
+          "rules": [
+            {
+              "id": "CodeRedundancy",
+              "shortDescription": {
+                "text": "Redundancies in Code"
+              }
+            },
+            {
+              "id": "ConditionIsAlwaysTrueOrFalse",
+              "shortDescription": {
+                "text": "Expression is always 'true' or always 'false'"
+              },
+              "helpUri": "https://www.jetbrains.com/resharperplatform/help?Keyword=ConditionIsAlwaysTrueOrFalse",
+              "relationships": [
+                {
+                  "target": {
+                    "id": "CodeRedundancy"
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "DeclarationRedundancy",
+              "shortDescription": {
+                "text": "Redundancies in Symbol Declarations"
+              }
+            },
+            {
+              "id": "UnusedVariable",
+              "shortDescription": {
+                "text": "Unused local variable"
+              },
+              "helpUri": "https://www.jetbrains.com/resharperplatform/help?Keyword=UnusedVariable",
+              "relationships": [
+                {
+                  "target": {
+                    "id": "DeclarationRedundancy"
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": []
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "originalUriBaseIds": {
+        "solutionDir": {
+          "uri": "file:///C:/Projects/CleanCode/",
+          "description": {
+            "text": "Solution Directory"
+          }
+        }
+      },
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

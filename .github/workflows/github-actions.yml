@@ -11,12 +11,12 @@ jobs:
         dotnet-version: [ '7.0.x' ]
 
     steps:
-      - run: echo "Job triggered by a ${{ github.event_name }} event, running on a ${{ runner.os }}."
+      - run: echo "${{ github.event_name }} event, running on a ${{ runner.os }}."
       - run: echo "Branch ${{ github.ref }}, Repository ${{ github.repository }}."
+
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: echo "The ${{ github.repository }} repository was cloned."
-      - run: echo "Test code."
   
       - name: List files in the repository
         run: |
@@ -29,11 +29,25 @@ jobs:
 
       - name: Display dotnet version
         run: dotnet --version
+
+      - name: Install ReSharper CLI tools
+        run: dotnet tool install -g JetBrains.ReSharper.GlobalTools
+
       - name: Install dependencies
         run: dotnet restore
 
       - name: Build
         run: dotnet build
+
+      - name: Code Cleanup
+        run: jb cleanupcode CleanCode.sln
+
+      - name: Code Inspect
+        run: jb inspectcode CleanCode.sln -f="sarif" -o=CodeIssues.json
+
+      - name: Display Code Inspect result
+        run: |
+          cat CodeIssues.json
 
       - name: Test
         run: dotnet test

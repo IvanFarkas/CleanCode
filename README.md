@@ -9,7 +9,7 @@
 ### [CleanupCode Command-Line Tool](https://www.jetbrains.com/help/resharper/CleanupCode.html)
 
 	jb cleanupcode CleanCode.sln
-	jb cleanupcode -p="API: Full Cleanup" CleanCode.sln
+	jb cleanupcode -p="Built-in: Reformat & Apply Syntax Style" CleanCode.sln
 
 ### [InspectCode Command-Line Tool](https://www.jetbrains.com/help/resharper/InspectCode.html)
 

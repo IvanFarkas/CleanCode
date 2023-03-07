@@ -51,14 +51,10 @@ public class WeatherForecastController : ControllerBase
                }).ToArray();
 
     Debug.WriteLine(retVal[0].TemperatureF);
-    
+
     return retVal;
   }
 
   [HttpGet(Name = "GetTest")]
-  public int GetTest(TestRequest request)
-  {
-    return request.Id;
-  }
-
+  public int GetTest(TestRequest request) => request.Id;
 }

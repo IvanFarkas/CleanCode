@@ -176,7 +176,9 @@ resharper_unused_type_global_highlighting = hint
 
 csharp_using_directive_placement = inside_namespace:silent
 csharp_prefer_braces = true:silent
-csharp_style_namespace_declarations = block_scoped:none
+
+# IDE0160: Convert to file-scoped namespace
+csharp_style_namespace_declarations = file_scoped:none
 
 [*.{cs,vb}]
 #### Naming styles ####
